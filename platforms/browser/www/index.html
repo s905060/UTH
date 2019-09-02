@@ -5,18 +5,18 @@
 		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
 		<title>Ultimate Texas Hold'em Strategy Calculator</title>
 		<link title="currentstyle" href="css/pages.css" rel="stylesheet" media="screen">
-		<link rel="stylesheet" href="css/layout.css">
+		<!-- <link rel="stylesheet" href="css/layout.css"> -->
 
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Ultimate Texas Hold'em Strategy Calculator</title>
 
-		<script language="javascript" src="js/menu.js"></script>
+		<!-- <script language="javascript" src="js/menu.js"></script> -->
 		<script language="javascript" src="js/prototype.js"></script>
 		<style type="text/css">
 			#deck 
 			{ 
-				border: 1px solid brown;
+				border: 1px;
 				padding: 0px;
 				margin: 0px;
 				background:#101010;
@@ -26,16 +26,16 @@
 				border: 0px; 
 				margin: 0px;
 				padding: 1px;
-				width: 40px;
-				height: 40px;	
+				width: 20px;
+				height: 20px;	
 				cursor: hand;
 			}
 			.large_card 
 			{
 				border: 0px; 
 				margin: 0px;			
-				width: 71px; 
-				height: 95px;
+				width: 33px; 
+				height: 33px;
 			}
 		</style>
 		<script type="text/javascript">
@@ -435,12 +435,12 @@
 
   <TABLE><TR><TD valign="top">
 		<form name="calc" onSubmit="return false" style="margin: 0px; padding: 0px;">
-		<div style="width: 550px; font: 11px Verdana; border: 2px dotted; padding: 10px;">
+		<div style="width: 300px; font: 11px Verdana; border: 2px dotted; padding: 10px;">
         <div align="center">
 
 		 <div style="border-top: solid 1px; margin-left: 10px; margin-right: 10px; margin-bottom: 10px; margin-top: 15px;"></div>
 
-<div id="deck" align="center" nowrap style="font-size: 0px; width: 550px;">
+<div id="deck" align="center" nowrap style="font-size: 0px; width: 300px;">
     <img id="cardSmall2h" class="small_card" src="images/cards/small/2h.gif" height="40" width="40" onclick="onDeckClick('2h')"></img>
     <img id="cardSmall3h" class="small_card" src="images/cards/small/3h.gif" height="40" width="40" onclick="onDeckClick('3h')"></img>
     <img id="cardSmall4h" class="small_card" src="images/cards/small/4h.gif" height="40" width="40" onclick="onDeckClick('4h')"></img>
@@ -498,13 +498,13 @@
     <img id="cardSmall1c" class="small_card" src="images/cards/small/1c.gif" height="40" width="40" onclick="onDeckClick('1c')"></img>
 </div>
 	 
-        <div style="border-top: solid 1px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px; margin-top: 10px;"></div>
+        <div style="border-top: solid 1px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px; margin-top: 10px; width: 300px;"></div>
 		<div style="text-align: center;">
-		<table align="center" style="text-align: center">
+		<table align="center" style="text-align: center; width: 300px;">
 		   <tr>
-		      <td colspan="2"><font size="2"><strong>Player Cards</strong></font></td>
-		      <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;</td>						
-              <td colspan="5"><font size="2"><strong>Community Cards</strong></font></td>
+		      <td colspan="2"><font size="1"><strong>Player Cards</strong></font></td>
+		      <!-- <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;</td>-->
+              <td colspan="5"><font size="1"><strong>Community Cards</strong></font></td>
 		   </tr>
 		   <tr>
 		       <td><a href="javascript:void(0)" onClick="selectCard(0, undefined)" ><img id="cardImages0" class="large_card" src="images/cards/large/back.gif"></a></td>
@@ -516,36 +516,36 @@
 	           <td><a href="javascript:void(0)" onClick="selectCard(6, undefined)" ><img id="cardImages6" class="large_card" src="images/cards/large/back.gif"></a></td>
             </tr>
             <tr>
-               <td><input type="text" name="cards" onChange="return selectCard(0, this.value)" size="2"></td>
-               <td><input type="text" name="cards" onChange="return selectCard(1, this.value)" size="2"></td>
-               <td><input type="text" name="cards" onChange="return selectCard(2, this.value)" size="2"></td>
-               <td><input type="text" name="cards" onChange="return selectCard(3, this.value)" size="2"></td>
-               <td><input type="text" name="cards" onChange="return selectCard(4, this.value)" size="2"></td>
-               <td><input type="text" name="cards" onChange="return selectCard(5, this.value)" size="2"></td>
-               <td><input type="text" name="cards" onChange="return selectCard(6, this.value)" size="2"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(0, this.value)" size="1"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(1, this.value)" size="1"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(2, this.value)" size="1"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(3, this.value)" size="1"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(4, this.value)" size="1"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(5, this.value)" size="1"></td>
+               <td><input type="text" name="cards" onChange="return selectCard(6, this.value)" size="1"></td>
             </tr>
          </table>	
 		 <br/>
-		 <div style="text-align: left; margin-left: 110px;">	
-		    <input type="radio" id="handoptimization" name="optimization" value="hand" checked><label for="handoptimization"><b>Optimize For Largest Gain Per Hand (standard)</b></label><br/>
-            <input type="radio" id="wageroptimization" name="optimization" value="wager"><label for="wageroptimization"><b>Optimize For Largest Gain Per Unit Wagered </b></label></br>
+		 <div style="text-align: left; margin-left: 0px;">	
+		    <input type="radio" id="handoptimization" name="optimization" value="hand" checked><label for="handoptimization" style="font-size: 10px"><b>Largest Gain Per Hand </b></label><br/>
+            <input type="radio" id="wageroptimization" name="optimization" value="wager"><label for="wageroptimization" style="font-size: 10px"><b>Largest Gain Per Unit Wagered </b></label></br>
          </div>
          <span id="payout_display">
 			</span>
-      <div style="border-top: solid 1px; margin: 10px;"></div>
+      <div style="border-top: solid 1px; margin: 5px;"></div>
       <div align="center">
-	     <button onclick="_clear(); return false;">Clear</button>&nbsp;&nbsp
-	     <button onclick="_submit(); return false;">Calculate</button>		 
+	     <button style="font-size: 10px;" onclick="_clear(); return false;">Clear</button>&nbsp;&nbsp
+	     <button style="font-size: 10px;" onclick="_submit(); return false;">Calculate</button>		 
 	  </div>
 		 		 		 
-      <div id="result" style="display: none; font-size: 12px; font-family: Verdana, Geneva, sans-serif;">
+      <div id="result" style="display: none; font-size: 10px; font-family: Verdana, Geneva, sans-serif;">
 	    <div style="border-top: solid 1px; margin: 10px;"></div>
         <div style="background: #222; padding: 8px; text-align: left;">
           <div align="center" >
             <p style="text-align: center" id="error"></p>
             <div id="stats">
               <br/>
-              <b><u id="decision" style="font-size: 20px ; color: red; font-weight: bold;"></u></b></br><br>
+              <b><u id="decision" style="font-size: 12px ; color: red; font-weight: bold;"></u></b></br><br>
 		      <div id="percentage">
 		        <b><span id="ev1"></span></b><br/>
                 <b><span id="ev2"></span></b><BR><BR>
