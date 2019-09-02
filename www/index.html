@@ -16,7 +16,7 @@
 		<style type="text/css">
 			#deck 
 			{ 
-				border: 1px;
+				border: 0px;
 				padding: 0px;
 				margin: 0px;
 				background:#101010;
@@ -26,16 +26,16 @@
 				border: 0px; 
 				margin: 0px;
 				padding: 1px;
-				width: 20px;
-				height: 20px;	
+				width: 7%;
+				height: 100%;	
 				cursor: hand;
 			}
 			.large_card 
 			{
 				border: 0px; 
 				margin: 0px;			
-				width: 33px; 
-				height: 33px;
+				width: 100%; 
+				height: 50%;
 			}
 		</style>
 		<script type="text/javascript">
@@ -406,7 +406,7 @@
 	</head>
 
 	<!-- <body onLoad="_load();"> -->
-	<body>
+	<body style="width: 100%" align="center">
 	    <script type="text/javascript" src="cordova.js"></script>
 		 
 			<script type="text/javascript">
@@ -425,7 +425,7 @@
 				}
 			</script>
 		</div>
-<div id="main">
+<div id="main" style="width: 100%" align="center">
 
 			<br/>
 
@@ -435,12 +435,12 @@
 
   <TABLE><TR><TD valign="top">
 		<form name="calc" onSubmit="return false" style="margin: 0px; padding: 0px;">
-		<div style="width: 300px; font: 11px Verdana; border: 2px dotted; padding: 10px;">
+		<div style="width: 100%; font: 11px Verdana; border: 0px dotted; padding: 0px;">
         <div align="center">
 
-		 <div style="border-top: solid 1px; margin-left: 10px; margin-right: 10px; margin-bottom: 10px; margin-top: 15px;"></div>
+		 <div style="border-top: solid 0px; margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: 0px;"></div>
 
-<div id="deck" align="center" nowrap style="font-size: 0px; width: 300px;">
+<div id="deck" align="center" nowrap style="font-size: 0px; width: 100%;">
     <img id="cardSmall2h" class="small_card" src="images/cards/small/2h.gif" height="40" width="40" onclick="onDeckClick('2h')"></img>
     <img id="cardSmall3h" class="small_card" src="images/cards/small/3h.gif" height="40" width="40" onclick="onDeckClick('3h')"></img>
     <img id="cardSmall4h" class="small_card" src="images/cards/small/4h.gif" height="40" width="40" onclick="onDeckClick('4h')"></img>
@@ -498,9 +498,10 @@
     <img id="cardSmall1c" class="small_card" src="images/cards/small/1c.gif" height="40" width="40" onclick="onDeckClick('1c')"></img>
 </div>
 	 
-        <div style="border-top: solid 1px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px; margin-top: 10px; width: 300px;"></div>
+        <div style="border-top: solid 0px; margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: 0px; width: 100%;"></div>
 		<div style="text-align: center;">
-		<table align="center" style="text-align: center; width: 300px;">
+		<table align="center" style="text-align: center; width: 100%;">	
+		   <tr><td></td></tr>
 		   <tr>
 		      <td colspan="2"><font size="1"><strong>Player Cards</strong></font></td>
 		      <!-- <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;</td>-->
@@ -526,31 +527,36 @@
             </tr>
          </table>	
 		 <br/>
-		 <div style="text-align: left; margin-left: 0px;">	
-		    <input type="radio" id="handoptimization" name="optimization" value="hand" checked><label for="handoptimization" style="font-size: 10px"><b>Largest Gain Per Hand </b></label><br/>
-            <input type="radio" id="wageroptimization" name="optimization" value="wager"><label for="wageroptimization" style="font-size: 10px"><b>Largest Gain Per Unit Wagered </b></label></br>
+		 <div style="text-align: left; margin-left: 0px;">
+		 	<table align="center" style="text-align: center; width: 100%;">
+			 <tr>
+			 	<td><input type="radio" id="handoptimization" name="optimization" value="hand" checked><label for="handoptimization" style="font-size: 10px"><b>Largest Gain Per Hand </b></label><br/></td>
+				<td><input type="radio" id="wageroptimization" name="optimization" value="wager"><label for="wageroptimization" style="font-size: 10px"><b>Largest Gain Per Unit Wagered </b></label></br></td>
+			 </tr>
+			</table>
          </div>
          <span id="payout_display">
 			</span>
-      <div style="border-top: solid 1px; margin: 5px;"></div>
+      <div style="border-top: solid 0px; margin: 0px;"></div>
       <div align="center">
-	     <button style="font-size: 10px;" onclick="_clear(); return false;">Clear</button>&nbsp;&nbsp
-	     <button style="font-size: 10px;" onclick="_submit(); return false;">Calculate</button>		 
+	  	 <br/>
+	     <button style="font-size: 40px;" onclick="_clear(); return false;">Clear</button>&nbsp;&nbsp
+	     <button style="font-size: 40px;" onclick="_submit(); return false;">Calculate</button>		 
 	  </div>
-		 		 		 
+	  <br/>		 		 
       <div id="result" style="display: none; font-size: 10px; font-family: Verdana, Geneva, sans-serif;">
-	    <div style="border-top: solid 1px; margin: 10px;"></div>
-        <div style="background: #222; padding: 8px; text-align: left;">
+	    <div style="border-top: solid 0px; margin: 00px;"></div>
+        <div style="background: #222; padding: 0px; text-align: left;">
           <div align="center" >
             <p style="text-align: center" id="error"></p>
             <div id="stats">
               <br/>
-              <b><u id="decision" style="font-size: 12px ; color: red; font-weight: bold;"></u></b></br><br>
+              <b><u id="decision" style="font-size: 70px ; color: red; font-weight: bold;"></u></b></br><br>
 		      <div id="percentage">
 		        <b><span id="ev1"></span></b><br/>
                 <b><span id="ev2"></span></b><BR><BR>
 		      </div>
-	          <TABLE align="center" id="ttab" CELLPADDING=0 style="font-size: 12px; font-family: Verdana, Geneva, sans-serif">
+	          <TABLE align="center" id="ttab" CELLPADDING=0 style="font-size: 10px; font-family: Verdana, Geneva, sans-serif">
 	            <TR><TD nowrap align="right"><strong>Player Cards: </strong>&nbsp;</TD><TD><B><span id="handp"></span></TD></TR>
 	            <TR><TD nowrap align="right"><strong>Community Cards: </strong>&nbsp;</TD><TD><B><span id="handc"></span></TD></TR>
 	          </TABLE>			  
